@@ -24,3 +24,14 @@ function actualizarLista() {
         lista.appendChild(li);
     }
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("ERROR - No se han agregado amigos para sortear");
+    } else {
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        let nombreSorteado = amigos[indiceAleatorio];
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = `<li> ${nombreSorteado} es el amigo secreto`;
+    }
+}
